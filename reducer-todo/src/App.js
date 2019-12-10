@@ -8,6 +8,11 @@ import './App.css';
 
 const H1Style = styled.h1`
   font-family: 'Solway', serif;
+  margin: 0;
+  
+`
+const NavDiv = styled.div`
+  border-bottom: 2px dotted black;
 `
 
 function App() {
@@ -35,7 +40,9 @@ function App() {
   
   return (
     <div className="App">
+      <NavDiv>
       <H1Style>DO YOUR CHORES!</H1Style>
+      </NavDiv>
       <ToDoForm addTask={addTask} filter={filterCompleted} />
       <ToDoList todoState={todoState.todos} toggle={toggleComplete} />
     </div>

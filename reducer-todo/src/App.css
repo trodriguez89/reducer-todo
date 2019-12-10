@@ -6,15 +6,15 @@
   border: 1px solid black;
   width: 45%;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 10px;
   font-size: 30px;
-  background-color: #F08080;
+  background-color: #84A296;
   border-radius: 10px;
   font-family: 'Indie Flower', cursive;
 }
 
 .task.completed {
   text-decoration: line-through;
-  background-color: #90EE90;
+  background-color: #EAE6DA;
 }

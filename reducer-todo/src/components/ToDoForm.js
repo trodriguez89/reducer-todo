@@ -1,4 +1,22 @@
 import React, {useState} from "react";
+import styled from "styled-components";
+
+const ButtonStyles = styled.button`
+    background-color: #B7CDC1;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+
+`
+
+const FormDiv = styled.div`
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+`
 
 export const ToDoForm = (props) => {
     const [task, setTask] = useState("")
@@ -20,6 +38,7 @@ export const ToDoForm = (props) => {
 
 
     return (
+        <FormDiv>
         <form onSubmit={handleSubmit}>
             <input
             type="text"
@@ -28,8 +47,9 @@ export const ToDoForm = (props) => {
             value={task}
             onChange={handleChanges}
             />
-            <button type="submit">Add Task!</button>
-            <button onClick={clearForm}>Clear Completed Tasks</button>
+            <ButtonStyles type="submit">Add Task!</ButtonStyles>
+            <ButtonStyles onClick={clearForm}>Clear Completed Tasks</ButtonStyles>
         </form>
+        </FormDiv>
     );
 }
