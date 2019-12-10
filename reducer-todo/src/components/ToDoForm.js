@@ -9,10 +9,15 @@ export const ToDoForm = (props) => {
         setTask("")
     }
 
+    const handleChanges = event => {
+        setTask(event.target.value)
+    }
+
     const clearForm = event => {
         event.preventDefault();
         props.filter();
     }
+
 
     return (
         <form onSubmit={handleSubmit}>
@@ -21,7 +26,7 @@ export const ToDoForm = (props) => {
             name="task"
             placeholder="Enter a Chore"
             value={task}
-            onChange={event => setTask(event.target.value)}
+            onChange={handleChanges}
             />
             <button type="submit">Add Task!</button>
             <button onClick={clearForm}>Clear Completed Tasks</button>

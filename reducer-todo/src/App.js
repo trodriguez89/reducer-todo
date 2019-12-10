@@ -2,8 +2,13 @@ import React, {useState, useReducer} from 'react';
 import {initialState, toDoReducer} from "./reducers/todoReducer";
 import {ToDoForm} from "./components/ToDoForm";
 import {ToDoList} from "./components/ToDoList";
-import logo from './logo.svg';
+import styled from "styled-components";
+
 import './App.css';
+
+const H1Style = styled.h1`
+  font-family: 'Solway', serif;
+`
 
 function App() {
   const [todoState, dispatch] = useReducer(toDoReducer, initialState)
@@ -30,7 +35,7 @@ function App() {
   
   return (
     <div className="App">
-      <h1>DO YOUR CHORES!</h1>
+      <H1Style>DO YOUR CHORES!</H1Style>
       <ToDoForm addTask={addTask} filter={filterCompleted} />
       <ToDoList todoState={todoState.todos} toggle={toggleComplete} />
     </div>

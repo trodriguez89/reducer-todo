@@ -36,7 +36,7 @@ export const toDoReducer = (state, action) => {
             }
         case "FILTER":
             return {
-                todos: state.todos.filter(todos => !todos.completed)
+                todos: state.todos.filter(item => !item.completed)
             }
             default:
                 return state;
