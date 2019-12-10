@@ -30,6 +30,7 @@ function App() {
   
   return (
     <div className="App">
+      <h1>DO YOUR CHORES!</h1>
       <ToDoForm addTask={addTask} filter={filterCompleted} />
       <ToDoList todoState={todoState.todos} toggle={toggleComplete} />
     </div>
