@@ -18,7 +18,7 @@ const NavDiv = styled.div`
 function App() {
   const [todoState, dispatch] = useReducer(toDoReducer, initialState)
 
-  const addTask = (item) => {
+  const addTask = item => {
     dispatch({
       type: "ADD_TASK",
       payload: item
